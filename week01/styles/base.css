@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  font-family: 'Raleway', serif;
+  font-size: 1em;
+  grid-template: 2fr 4fr 1fr / 1fr 3fr 1fr;
+}
+
+footer {
+  text-align: center;
+  align-content: center;
+}
+
+footer, header {
+  background-color: #ddd;
+  grid-column: 1 / 4;
+}
+
+header {
+  align-items: center;
+  display: grid;
+  grid-template: 3fr 2fr / 9fr 1fr;
+  flex-direction: column;
+}
+
+header img {
+  grid-area: 1 / 2 / 3 / 3;
+  justify-self: center;
+}
+
+header span {
+  grid-area: 1 / 1 / 2 / 2;
+  text-align: center;
+}
+
+header nav {
+  background-color: #ccc;
+  grid-area: 2 / 1 / 2 / 2;
+  padding: 2em;
+}
+
+h1, h2, h3 {
+  font-family: 'Work Sans', serif;
+}
+
+h2 {
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  background-color: #eee;
+  grid-column: 2 / 3;
+  padding: 2em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: red;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+section.card:first-of-type img {
+  float: right;
+  margin: 1em;
+}
+
+section.card:last-of-type img {
+  float: left;
+  margin: 1em;
+}
+
+section h2 {
+  grid-area: 1 / 1 / 2 / 2;
+}
