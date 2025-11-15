@@ -1,0 +1,11 @@
+@media (min-width: 48em) {
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+  #menu { display: none; }
+  #nav-links { display: flex; gap: 1.5rem; }
+  #nav-links li a { color: black; text-decoration: none; }
+  #nav-links li a.hover { text-decoration: underline; }
+
+  main figure { margin-bottom: 2rem; }
+  main { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 0 2rem; }
+  main h2 { grid-column: 1 / -1; }
+}
