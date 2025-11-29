@@ -1,0 +1,54 @@
+/* Styles for large screens (desktop) - Rewritten to prioritize aspect ratio preservation */
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #nav-links {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  #nav-links li {
+    border: none;
+  }
+
+  #nav-links a {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  #temples {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* Increased gap for better spacing */
+  }
+
+  figure {
+    text-align: center; /* Changed back to center for better alignment with centered images */
+    padding: 1.5rem; /* Slightly more padding for appeal */
+  }
+
+  figure img {
+    width: auto; /* Allow natural width, no forcing to 100% */
+    max-width: 100%; /* Cap at container width */
+    height: auto; /* Preserve aspect */
+    max-height: 250px; /* Height cap without distortion */
+    object-fit: contain; /* Ensure fit within bounds without stretching or cropping */
+    display: block;
+    margin: 0 auto; /* Center the image if not full width */
+    border-radius: 4px;
+  }
+
+  figure h3,
+  figure p {
+    text-align: center; /* Ensure text centers under image for consistency */
+  }
+}
