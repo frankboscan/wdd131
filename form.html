@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get" novalidate>
+            <fieldset>
+                <legend>Product Information</legend>
+
+                <label for="product">Product Name: <span class="required" aria-label="required">*</span></label>
+                <select id="product" name="product" required aria-required="true">
+                </select>
+
+                <label>Overall Rating: <span class="required" aria-label="required">*</span></label>
+                <div class="rating" role="radiogroup" aria-labelledby="rating-label">
+                    <span id="rating-label" class="screenreader-only">Overall Rating</span>
+                    <input type="radio" id="rate5" name="rating" value="5" required><label for="rate5" title="5 stars">★</label>
+                    <input type="radio" id="rate4" name="rating" value="4"><label for="rate4" title="4 stars">★</label>
+                    <input type="radio" id="rate3" name="rating" value="3"><label for="rate3" title="3 stars">★</label>
+                    <input type="radio" id="rate2" name="rating" value="2"><label for="rate2" title="2 stars">★</label>
+                    <input type="radio" id="rate1" name="rating" value="1"><label for="rate1" title="1 star">★</label>
+                </div>
+
+                <label for="installDate">Date of Installation: <span class="required" aria-label="required">*</span></label>
+                <input type="date" id="installDate" name="installDate" required aria-required="true">
+            </fieldset>
+
+            <fieldset>
+                <legend>Useful Features</legend>
+                <div class="checkbox-group">
+                    <div class="checkbox-item"><input type="checkbox" id="easyInstall" name="features" value="Easy to install"><label for="easyInstall">Easy to install</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="durable" name="features" value="Durable"><label for="durable">Durable</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="highPerf" name="features" value="High performance"><label for="highPerf">High performance</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="affordable" name="features" value="Affordable"><label for="affordable">Affordable</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="userFriendly" name="features" value="User-friendly"><label for="userFriendly">User-friendly</label></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Written Review (optional)</legend>
+                <textarea id="reviewText" name="review" rows="5"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>User Information (optional)</legend>
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName">
+            </fieldset>
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> Brigham Young University-Idaho | All rights reserved</p>
+    </footer>
+</body>
+</html>
