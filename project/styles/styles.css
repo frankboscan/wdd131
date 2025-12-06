@@ -23,3 +23,71 @@ img {
     border: 1px solid red;
     margin-bottom: 20px;
 }
+
+header {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: red;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, button {
+    padding: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+button {
+    cursor: pointer;
+    background-color: red;
+    color: black;
+    border: none;
+}
+
+.solution {
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    nav ul {
+        flex-direction: row;
+    }
+}
